@@ -38,8 +38,10 @@ jobs:
       - name: Build React application
         run: npm run build
 
-      - name: Configure GitHub Pages
+      -       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
+        with:
+          enablement: true
 
       - name: Upload build files
         uses: actions/upload-pages-artifact@v4
